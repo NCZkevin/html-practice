@@ -32,10 +32,11 @@ html, body{
 }*/
 
 .head {
-	background: url('../images/hero.jpg') no-repeat 0px 0px;
+	background: url('../images/17.jpg') no-repeat 0px 0px;
 	background-size: cover;
 	min-height:700px;
 	position:relative;
+	background-position: center;
 }
 
 @media (max-width: 480px) {
