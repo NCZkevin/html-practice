@@ -1,0 +1,244 @@
+html, body{
+  	font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+  	 background: #f3f3f3;
+  	 text-align: center;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 95%;
+}
+
+/*@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+@media (min-width: 9920px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}*/
+
+.head {
+	background: url('../images/hero.jpg') no-repeat 0px 0px;
+	background-size: cover;
+	min-height:700px;
+	position:relative;
+}
+
+@media (max-width: 480px) {
+	.head {
+		min-height: 420px;
+	}
+}
+.info {
+	padding-top: 15%;
+}
+
+.info img {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+a,button {
+	text-decoration: none;
+	cursor: pointer
+}
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+header > a {
+	text-align: center;
+	line-height: 46px;
+}
+
+.button {
+	font-size: 1.2em;
+	width: 226px;
+	height: 46px;
+	border-radius: 50px;
+	border: 2px solid rgba(255,255,255,.8);
+	display: inline-block;
+}
+
+.head-text h2 {
+	margin-bottom: 0.2em;
+}
+
+.head-text span {
+	width: 10%;
+	margin: 0 auto;
+	background-color: #88ccd8;
+	display: block;
+	height: 7px;
+}
+
+
+.meinfo {
+	margin-top: 3em; 
+}
+
+.meinfo p {
+	line-height: 0.8em;
+	margin-top: 0.5em;
+}
+
+.m-time {
+	margin-top: 2em;
+}
+.m-time .m-time-run span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 44px;
+	margin: 0 6px;
+	background-color: #585957;
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+	font-size: 20px;
+	line-height: 44px;
+	color: #f1f2f0
+}
+
+.m-time .m-time-run span:before {
+	content: '';
+	width: 100%;
+	height: 22px;
+	background-color: #686967;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #383937;
+	z-index: 0;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px
+}
+
+.m-time .m-time-run span i {
+	position: absolute;
+	width: 30px;
+	height: 100%;
+	z-index: 1;
+	top: 0;
+	left: 5px;
+	text-indent: -9999rem;
+	background: url(../images/times.png) 0 0 no-repeat;
+	-webkit-transition: all 1s linear;
+	transition: all 1s linear
+}
+
+.m-time .m-time-run span i.init {
+	background-position: 0 0
+}
+
+.m-time .m-time-run span:last-child:before {
+	border: 0
+}
+
+.m-time .m-time-run span:last-child:after {
+	content: '';
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.2);
+	z-index: 3;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-top: 1px solid #383937
+}
+
+.m-time .m-time-run span:last-child i {
+	-webkit-transition: none;
+	transition: none
+}
+.m-time .m-time-run.txt {
+	margin-top: 5px;
+	height: 20px;
+	line-height: 20px
+}
+
+.m-time .m-time-run.txt span,.m-time .m-time-run.txt span:before,.m-time .m-time-run.txt span:after {
+	background: 0;
+	border: 0;
+	line-height: 20px;
+	height: 20px;
+	color: #989997;
+	font-size: 14px;
+	vertical-align: top
+}
+
+.m-time-start {
+	margin-top: 20px;
+	color: #787977;
+
+}
+
+.work {
+	margin-top: 4em;
+}
+
+.worklist {
+	margin-top: 3em;
+}
+
+.workbox {
+	width: 32%;
+	float: left;
+	margin-left: 0.5em;
+	overflow: hidden;
+}
+
+.workimage {
+	height: 300px;
+	margin-bottom: 1.2em;
+	background-size: cover;
+	background-position: center center;
+	background-image: url(http://www.dodora.cn/images/prd/gospel.png);
+}
+
+.social{
+	margin-top: 4em;
+}
+
+.sociallist {
+	overflow: hidden;
+	margin-top: 4em;
+}
+
+.sociallist ul li {
+	float: left;
+	margin-right: 3em;
+}
+
+.future-image {
+	margin-top: 2em;
+	height: 300px;
+	background-size: cover;
+	background-position: center center;
+	background-image: url(../images/future.png);
+}
+
+.footer {
+	border-top: 1px solid #DBDBDB;
+}
