@@ -1,4 +1,7 @@
 .DS_Store
 /test
 /node_modules
-
+test/
+scss/
+mydesign/.sass-cache/
+mydesign/node_modules/
