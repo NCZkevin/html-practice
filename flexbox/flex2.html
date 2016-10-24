@@ -4,11 +4,26 @@
     <meta charset="utf-8">
     <title>flex布局</title>
     <style>
+      html, body, div {
+          margin: 0;
+          padding: 0;
+          border: 0;
+        }
+
+        html, body {
+          width: 100%;
+      }
       .box{
         display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
       }
       .box div {
         width: 150px;
+        padding: 20px;
+        margin-bottom: 20px;
       }
       .item1 {
         border: 1px solid #f00;
