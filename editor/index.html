@@ -21,7 +21,7 @@
       .fixed > p{
         display: inline;
       }
-      .item {
+      .item,.item1,.item2 {
         background-color: blue;
         border: 1px solid red;
         width: 7%;
@@ -44,15 +44,15 @@
           }
         }
         for (var i = 0; i < 14; i++) {
-          $(".div2").append("<div class='item'>internt</div>");
+          $(".div2").append("<div class='item1'>internt</div>");
           if (i==1 || i == 3 || i==12) {
-            $(".item:eq("+i+")").css("visibility","hidden");
+            $(".item1:eq("+i+")").css("visibility","hidden");
           }
         }
         for (var i = 0; i < 14; i++) {
-          $(".div3").append("<div class='item'>internt</div>");
+          $(".div3").append("<div class='item2'>internt</div>");
           if (i==1 || i == 3 || i==12 || i==5 || i==11) {
-            $(".item:eq("+i+")").css("visibility","hidden");
+            $(".item2:eq("+i+")").css("visibility","hidden");
           }
         }
       })
