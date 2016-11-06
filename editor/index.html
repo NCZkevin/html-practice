@@ -21,9 +21,47 @@
       .fixed > p{
         display: inline;
       }
+      .item {
+        background-color: blue;
+        border: 1px solid red;
+        width: 7%;
+      }
+      .div1,.div2,.div3{
+        display: flex;
+        /*justify-content: space-between;*/
+      }
+      .editing {
+        border: 1px solid black;
+      }
     </style>
+    <script src="./jquery.min.js"></script>
     <script type="text/javascript">
-
+      $(function() {
+        for (var i = 0; i < 14; i++) {
+          $(".div1").append("<div class='item'>internt</div>");
+          if (i==1 || i == 3 || i==12 || i==5) {
+            $(".item:eq("+i+")").css("visibility","hidden");
+          }
+        }
+        for (var i = 0; i < 14; i++) {
+          $(".div2").append("<div class='item'>internt</div>");
+          if (i==1 || i == 3 || i==12) {
+            $(".item:eq("+i+")").css("visibility","hidden");
+          }
+        }
+        for (var i = 0; i < 14; i++) {
+          $(".div3").append("<div class='item'>internt</div>");
+          if (i==1 || i == 3 || i==12 || i==5 || i==11) {
+            $(".item:eq("+i+")").css("visibility","hidden");
+          }
+        }
+      })
+      function edit(){
+        $(".main").addClass('editing');
+      }
+      function save() {
+        $(".main").removeClass('editing');
+      }
     </script>
   </head>
 
@@ -40,6 +78,11 @@
       <div class="div2"></div>
       <div class="div3"></div>
       <div class="div4"></div>
+    </div>
+
+    <div class="tool">
+      <button onclick="edit()">编辑</button>
+      <button onclick="save()">保存</button>
     </div>
   </body>
 </html>
