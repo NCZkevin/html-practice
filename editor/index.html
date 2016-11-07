@@ -26,6 +26,11 @@
         border: 1px solid red;
         width: 7%;
       }
+      .hideitem {
+        border: 1px solid red;
+        width: 7%;
+        visibility: hidden;
+      }
       .div1,.div2,.div3{
         display: flex;
         /*justify-content: space-between;*/
@@ -37,10 +42,30 @@
     <script src="./jquery.min.js"></script>
     <script type="text/javascript">
       $(function() {
+        $.ajax({
+          type: "GET",
+          url:  "data.json",
+          success: function(data){
+            alert('0');
+            var json = eval(data);
+            console.log(json.shebei[0].display);
+            $.each(json.shebei,function(i,item) {
+              console.log(item.display);
+            })
+          },
+          error: function(err){
+            console.log(err);
+            alert('1');
+          }
+        });
+
         for (var i = 0; i < 14; i++) {
-          $(".div1").append("<div class='item'>internt</div>");
           if (i==1 || i == 3 || i==12 || i==5) {
-            $(".item:eq("+i+")").css("visibility","hidden");
+            // $(".item:eq("+i+")").css("visibility","hidden");
+            $(".div1").append("<div class='hideitem'>internt</div>");
+          }
+          else {
+            $(".div1").append("<div class='item'>internt</div>");
           }
         }
         for (var i = 0; i < 14; i++) {
@@ -58,6 +83,8 @@
       })
       function edit(){
         $(".main").addClass('editing');
+        $(".hideitem").append("<button>编辑</button>");
+        $(".hideitem").css("visibility","visible");
       }
       function save() {
         $(".main").removeClass('editing');
