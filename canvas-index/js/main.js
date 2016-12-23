@@ -1,4 +1,4 @@
-function Shape(x, y, texte){
+wfunction Shape(x, y, texte){
 		this.x = x;
 		this.y = y;
 		this.size = 150;
